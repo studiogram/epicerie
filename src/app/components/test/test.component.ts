@@ -8,15 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   title: string = "Mon titre";
-  quantity: number = 4;
+  quantity: number = 2;
   total: number = 20;
+  more: boolean = false;
+  clickCount: number = 0; 
+
   constructor() {
+    if(this.quantity > 3 ) this.more = true;
   }
 
   ngOnInit(): void {
   }
   getTaxes(): number {
     return this.total * 0.2;
+  }
+
+  addClick() {
+    this.clickCount ++;
   }
 
 }
