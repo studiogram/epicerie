@@ -5,7 +5,7 @@ import { AnimauxService } from 'src/app/services/animaux.service';
 @Component({
   selector: 'app-animaux',
   templateUrl: './animaux.component.html',
-  styleUrls: ['./animaux.component.scss']
+  styleUrls: ['./animaux.component.css']
 })
 export class AnimauxComponent implements OnInit {
   testAnimal: string = 'koala';
