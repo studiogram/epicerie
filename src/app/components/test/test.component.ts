@@ -23,7 +23,7 @@ export class TestComponent implements OnInit {
     return this.total * 0.2;
   }
 
-  addClick() {
+  addClick(): void {
     this.clickCount ++;
   }
 

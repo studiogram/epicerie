@@ -1,8 +1,17 @@
 <div>
-{{clickCount}}
-<button (click)="addClick()">Ajouter un click</button>
-</div>
-<!-- <p>{{title}} - {{quantity}}</p>
-<p>{{getTaxes()}}</p>
+    <img src="/assets/1.jpg" alt="image 1">
+    <!-- Two-way binding -->
+    {{title}}
+    <input type="text" [(ngModel)]="title">
 
-<button [disabled]="quantity > 3">Test</button> -->
+    <p class="bg-warning">Test</p>
+    <!-- Property binding -->
+    <p>{{title}} - {{quantity}}</p>
+    <p>{{getTaxes()}}</p>
+    <button [disabled]="quantity > 3">Test</button>
+
+    <!-- Event binding -->
+    {{clickCount}}
+    <button (click)="addClick()">Ajouter un click</button>
+</div>
+
