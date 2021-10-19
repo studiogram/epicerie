@@ -7,6 +7,7 @@ import { AppComponent } from './components/app/app.component';
 import { TestComponent } from './components/test/test.component';
 import { AnimauxComponent } from './components/animaux/animaux.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { AnimauxService } from './services/animaux.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { ProductListComponent } from './components/product-list/product-list.com
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AnimauxService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

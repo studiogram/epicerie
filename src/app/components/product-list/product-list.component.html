@@ -5,7 +5,8 @@
             <div class="card" [ngClass]="{'bg-danger-light' : product.stock < 5}">
                 <img class="card-img-top" [src]="product.img" [alt]="'image ' + product.name" />
                 <div class="card-body">
-                    <h5 class="card-title">{{product.name}}</h5>
+                    <h5 class="card-title">{{product.name | uppercase}}</h5>
+                    <h4 class="card-title">{{product.name}}</h4>
 
                     <ng-container *ngIf="product.stock >= 5; else lowStock">
                         <p class="card-text text-success">En stock ( {{product.stock}} )</p>

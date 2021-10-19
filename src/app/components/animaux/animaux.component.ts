@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/interfaces/animal';
+import { AnimauxService } from 'src/app/services/animaux.service';
 
 @Component({
   selector: 'app-animaux',
@@ -8,12 +9,9 @@ import { Animal } from 'src/app/interfaces/animal';
 })
 export class AnimauxComponent implements OnInit {
   testAnimal: string = 'koala';
-  animaux: Animal[] = [
-    {name: 'koala', quantity: 40}, 
-    {name: 'fourmi', quantity: 100}
-  ];
+  animaux: Animal[] = this._animaux.animaux;
   
-  constructor() { }
+  constructor(private _animaux: AnimauxService) { }
 
   ngOnInit(): void {
   }

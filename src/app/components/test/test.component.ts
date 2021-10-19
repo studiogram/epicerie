@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
-
+  lastUpdate: Date = new Date();
   title: string = "Mon titre";
   quantity: number = 2;
   total: number = 20;
