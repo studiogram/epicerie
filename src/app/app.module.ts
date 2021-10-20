@@ -14,6 +14,7 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { ErrorComponent } from './components/error/error.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MenuComponent } from './components/menu/menu.component';
     AddProductComponent,
     UpdateProductComponent,
     ErrorComponent,
-    MenuComponent
+    MenuComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

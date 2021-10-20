@@ -14,6 +14,7 @@ export class UpdateProductComponent implements OnInit {
   constructor(private router: ActivatedRoute, private _products: ProductsService) { }
 
   ngOnInit(): void {
+    console.log(this.router);
   }
 
 }
