@@ -14,6 +14,7 @@ export class AnimauxComponent implements OnInit {
   constructor(private _animaux: AnimauxService) { }
 
   ngOnInit(): void {
+    console.log(this.animaux[1])
   }
 
 }

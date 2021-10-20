@@ -8,13 +8,24 @@ import { TestComponent } from './components/test/test.component';
 import { AnimauxComponent } from './components/animaux/animaux.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { AnimauxService } from './services/animaux.service';
+import { ProductsService } from './services/products.service';
+import { AnimalComponent } from './components/animal/animal.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
+import { ErrorComponent } from './components/error/error.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     AnimauxComponent,
-    ProductListComponent
+    ProductListComponent,
+    AnimalComponent,
+    AddProductComponent,
+    UpdateProductComponent,
+    ErrorComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +33,8 @@ import { AnimauxService } from './services/animaux.service';
     FormsModule
   ],
   providers: [
-    AnimauxService
+    AnimauxService,
+    ProductsService
   ],
   bootstrap: [AppComponent]
 })

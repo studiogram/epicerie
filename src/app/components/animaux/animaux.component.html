@@ -1,5 +1,8 @@
-<p *ngFor="let animal of animaux">
-    {{animal.name}}
+<p *ngFor="let animal of animaux; let i = index">
+    
+    <a [routerLink]="['/animaux', i]">{{animal.name}} {{i}}</a>
+    <a routerLink="animaux">panier</a>
+
 </p>
 
 
