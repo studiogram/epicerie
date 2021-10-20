@@ -12,4 +12,5 @@ export class ProductsService {
     {name: 'Poire', img: '/assets/poire.jpg', price: 2, stock: 4 },
   ];
   constructor() { }
+
 }
