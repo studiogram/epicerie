@@ -11,6 +11,6 @@
 
         <p class="card-text">{{product.price}} €</p>
         <a class="btn btn-secondary d-block mt-4" [routerLink]="['/produits', i]">Modifier</a>
-        <button class="btn btn-danger d-block mt-2 w-100">Supprimer</button>
+        <button class="btn btn-danger d-block mt-2 w-100" (click)="removeProductComponent(i)">Supprimer</button>
     </div>
 </div>

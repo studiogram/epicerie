@@ -12,7 +12,10 @@ export class ProductsService {
     {name: 'Poire', price: 2, stock: 4 },
   ];
   constructor() { }
-  addProduct(product: Product) {
+  addProduct(product: Product): void {
     this.products.push(product);
+  }
+  removeProduct(i: number): void {
+    this.products.splice(i, 1);
   }
 }
