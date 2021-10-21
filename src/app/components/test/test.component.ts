@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-test',
@@ -25,6 +26,11 @@ export class TestComponent implements OnInit {
 
   addClick(): void {
     this.clickCount ++;
+  }
+  onSubmit(coffeeForm: NgForm) {
+    console.log(coffeeForm.value.room);
+    console.log(coffeeForm.value.coffees);
+    coffeeForm.resetForm();
   }
 
 }

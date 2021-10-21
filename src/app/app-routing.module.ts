@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'produits/:id', component: UpdateProductComponent},
   {path: 'produits', component: ProductListComponent},
   {path: 'ajouter', component: AddProductComponent},
+  {path: 'test', component: TestComponent},
   {path: '', pathMatch: 'full', redirectTo: '/produits'},
   {path: '**', component: ErrorComponent},
   

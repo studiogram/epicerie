@@ -1,4 +1,12 @@
 
+<form #coffeeForm="ngForm" (ngSubmit)="onSubmit(coffeeForm)">
+    {{roomName.value}}{{roomName.touched}}
+    <input type="number" required minlength="3" name="room" placeholder="Salle" #roomName="ngModel" ngModel>
+    <input type="number" name="coffees" placeholder="Nombre de cafés" ngModel>
+    <button type="submit">Envoyer</button>
+</form>
+
+
     {{lastUpdate | date: 'dd/MM/YYYY'}}
     <div>
     <img src="/assets/1.jpg" alt="image 1">

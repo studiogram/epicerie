@@ -7,8 +7,9 @@ import { Product } from 'src/app/interfaces/product';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product: Product = {name: '', img: '', price: 0, stock: 0 };
-  @Input() i: number= 0;
+  /* "strictPropertyInitialization": false, tsconfig.ts */
+  @Input() product: Product;
+  @Input() i: number;
   constructor() { }
 
   ngOnInit(): void {
