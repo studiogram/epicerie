@@ -15,6 +15,7 @@ import { UpdateProductComponent } from './components/update-product/update-produ
 import { ErrorComponent } from './components/error/error.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     UpdateProductComponent,
     ErrorComponent,
     MenuComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,

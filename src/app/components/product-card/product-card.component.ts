@@ -14,5 +14,8 @@ export class ProductCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  setUrl(name: string): string {
+    return '/assets/' + name + '.jpg';
+  }
 
 }

@@ -1,0 +1,28 @@
+<div class="card" >
+    <p *ngIf="formSuccess == true" class="text-success text-center">Le produit a bien été ajouté</p>
+    <form class="card-body" #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+        <div class="mb-3">
+            <p class="text-danger" *ngIf="productName.invalid && (productName.dirty || productName.touched)">
+                Ce champ a une erreur :
+             </p>
+            <label for="productName" class="form-label">Nom :</label>
+            <input type="text" class="form-control" minlength="3"  required name="name" id="productName" #productName="ngModel" ngModel>
+        </div>
+        <div class="mb-3">
+            <p class="text-danger" *ngIf="productPrice.invalid && (productPrice.dirty || productPrice.touched)">
+                Ce champ a une erreur :
+             </p>
+            <label for="productPrice" class="form-label">Prix :</label>
+            <input type="number" class="form-control" required name="price" id="productPrice" #productPrice="ngModel" ngModel>
+        </div>
+        <div class="mb-3">
+            <p class="text-danger" *ngIf="productStock.invalid && (productStock.dirty || productStock.touched)">
+                Ce champ a une erreur :
+             </p>
+            <label for="productStock" class="form-label">Stock :</label>
+            <input type="number" class="form-control" required name="stock" id="productStock" #productStock="ngModel" ngModel>
+        </div>
+       
+        <button type="submit" class="btn btn-primary w-100" [disabled]="productForm.invalid">Submit</button>
+    </form>
+</div>
