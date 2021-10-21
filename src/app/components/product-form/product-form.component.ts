@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -8,15 +8,16 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./product-form.component.css']
 })
 export class ProductFormComponent implements OnInit {
-  formSuccess: boolean = false;
+  @Output() name = new EventEmitter();
+
   constructor(private _products: ProductsService) { }
 
   ngOnInit(): void {
   }
   onSubmit(productForm: NgForm) {
     console.log(productForm.value); 
-    this.formSuccess = true;
     this._products.addProduct(productForm.value);
+    this.name.emit(productForm.value.name);
     productForm.resetForm();
   }
 }
