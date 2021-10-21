@@ -1,1 +1,7 @@
-<p>update-product works! {{id}} {{product.name}}</p>
+<div class="container">
+    <h1 class="text-center">{{product.name}}</h1>
+    <div class="row justify-content-center">
+        <p *ngIf="nameProduct" class="text-success text-center">{{nameProduct}} a été modifié</p>
+        <app-product-form-update [id]="id" [product]="product" class="col-12 col-lg-3"  (name)="onName($event)"></app-product-form-update>
+    </div>
+</div>

@@ -15,6 +15,9 @@ export class ProductsService {
   addProduct(product: Product): void {
     this.products.push(product);
   }
+  updateProduct(i: number, product: Product): void {
+    this.products.splice(i, 1, product);
+  }
   removeProduct(i: number): void {
     this.products.splice(i, 1);
   }

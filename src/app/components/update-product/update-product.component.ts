@@ -9,6 +9,7 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent implements OnInit {
+  nameProduct: string;
   id: number = this.router.snapshot.params['id'];
   product: Product = this._products.products[this.id];
   constructor(private router: ActivatedRoute, private _products: ProductsService) { }
@@ -17,4 +18,7 @@ export class UpdateProductComponent implements OnInit {
     console.log(this.router);
   }
 
+  onName(name: string) {
+    this.nameProduct = name;
+  }
 }
